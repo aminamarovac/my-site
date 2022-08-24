@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="parent">
+    <img src="data:image/jpeg;base64,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"
+        <br><h3>BOOTSTRAPE<span class="span1">MADE</span></h3>
+        <i class="fa fa-television" aria-hidden="true" id="white"></i>
+    
+        <i class="fa fa-tablet" aria-hidden="true" id="white2"></i> <i class="fa fa-mobile" aria-hidden="true" id="white3"></i>
+        <h4>  < </h4>
+        <h5>UpConstructionn</h5>
+        <h6> >  </h6><i class="fa fa-sign-in" aria-hidden="true" id="jedan"> </i>
+        <button><i class="fa fa-download" aria-hidden="true" id="drugi"></i>
+            Free Downoload</button>
+</header>
+<main>
+<img src="https://ecompliance.com/wp-content/uploads/2015/09/Blog_Image_Updates_Toolbox_Talks.png">
+<div class="box1">
+    <h3>UpConstruction<span class="tri">.</span></h3>
+    <ul>
+        <li><b><a href="https:/www.google.rs">HOME</b></a></li>
+        <li><b><a href="https:/www.youtube.com">ABOUT</b></a></li>
+        <li><b><a href="https:/www.snapchbat.com">SERVICES</b></a></li>
+        <li><b><a href="https:/www.instagram.com">PROJECTS</b></a></li>
+        <li><b><a href="https:/www.github.com">BLOG</b></a></li>
+        <li><b><a href="https:/www.facebook.com">DROPDOWN</b></a></li>
+        <li><b><a href="https:/www.tiktok.com">CONTACT</b></a></li>
+    </ul>
+</div>
+<div class="drugi">
+    <h1><strong>Welcome to Up<br>Construction</strong>
+    </h1><br>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+
+        <br>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <br>
+        minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea <br>commodo consequat.
+
+    </h4>
+    <button>Get started</button>
+
+</div>
+<div class="glavni">
+<div class="treci">
+<h1>Minus hic non reiciendis ea possimus at quia
+</h1><br>
+<p>Rem id rerum. Debitis deserunt quidem delectus expedita ducimus dolor. Aut iusto ipsa. Eos ipsum nobis ipsa soluta itaque perspiciatis fuga ipsum perspiciatis. Eum amet fugiat totam nisi possimus ut delectus dicta.
+
+    <br><br>
+    Aliquam velit deserunt autem. Inventore et saepe. 
+    Tenetur suscipit eligendi labore culpa eos. Deserunt porro magni 
+    qui necessitatibus dolorem at animi cupiditate.
+    
+    </p>
+</div>
+
+<div class="cetvrti">
+    <h3>GET A QUOTE</h3><br>
+    <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead sero park flows.
+</p><br>
+<label for="name"></label>
+<input type="text" name="Name" id="Name" placeholder="Name" required>
+<br>
+<label for="e-mail"></label>
+<input type="text" name="E-mail" id="E-mail" placeholder="E-mail" required>
+<br>
+<label for="phone"></label>
+<input type="phone"name="Phone" id="Phone" placeholder="Phone" required>
+<br>
+<textarea name="" id="" rows="20" cols="40">Message</textarea>
+<br><br>
+<button>Get a quote</button>
+</div>
+</div>
+<div class="head">
+    <div class="head1">
+        <h1><b>Constructions</b></h1><br>
+        <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam
+porro nihil id ratione ea sunt quis<br> dolorem dolore earu
+        </p>
+</div>
+</div>
+<div class="glavna">
+<div class="boxprvi">
+    <img src="https://www.latrobe.edu.au/courses/bachelor-of-computer-science/B-Computer-Science-LTU_ME_36879_1440.jpg/large.jpg">
+<h3>Eligendi omnis sunt veritatis
+</h3>
+<h4>Fuga in dolorum et iste et culpa. Commodi possimus nesciunt modi voluptatem placeat deleniti adipisci. Cum delectus doloribus non veritatis. Officia temporibus illo magnam. Dolor eos et.
+</h4>
+</div>
+</div>
+<div class="glavno">
+<div class="boxdrugi">
+    <img src="https://www.iloveclaims.com/wp-content/uploads/2021/07/construction.jpeg">
+    <h3>Possimus ut sed velit <br>assumenda
+    </h3>
+    <h4>Sunt deserunt maiores voluptatem autem est rerum perferendis rerum blanditiis. Est laboriosam qui iste numquam laboriosam voluptatem architecto. Est laudantium sunt at quas aut hic. Eum dignissimos.
+
+    </h4>
+    </div>
+</div>
+
+<div class="jedan">
+    <div class="boxtreci">
+        <img src="https://cdn.ca.emap.com/wp-content/uploads/sites/8/2021/03/Hinkley-Bylor-steel-fixer-tying-steel-on-Pump-House-Raft..jpg">
+        <h3>Error beatae dolor inventore aut
+        </h3>
+        <h4>Dicta porro nobis. Velit cum in. Nesciunt dignissimos enim molestiae facilis numquam quae quaerat ipsam omnis. Neque debitis ipsum at architecto officia laboriosam odit. Ut sunt temporibus nulla culpa.
+
+        </h4>
+    </div>
+</div>
+<div class="dva">
+    <div class="boxcetvrti">
+        <img src="https://media.istockphoto.com/photos/engineer-technician-watching-team-of-workers-on-high-steel-platform-picture-id1171642478?k=20&m=1171642478&s=612x612&w=0&h=TGPFTGhp4oofqtEh9Ef2WFUyhiQkgUlKUM6aoIIZhFE=">
+        <h3>Expedita voluptas ut ut nesciunt</h3>
+        <h4>Aut est quidem doloremque voluptatem magnam quis excepturi vero quia. Eum eos doloremque architecto illo at beatae dolore. Fugiat suscipit et sint ratione dolores. Aut aliquid ea dolores libero nobis.
+</h4>
+    </div>
+</div>
+<br><br><br>
+
+<div class="glav">
+    <div class="head6">
+        <h1>Services</h1><br>
+        <h3>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur 
+            est eveniet deleniti fignissimos eos quam
+
+        </h3>
+    </div>
+</div>
+<div class="boxi">
+    <div class="boxa">
+        <i class="fa fa-inbox" aria-hidden="true" id="jed"></i>
+        <h1>Nesceiunt mete</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsam odio, repudiandae ex eveniet consequuntur magnam voluptas praesentium accusamus eius.
+</p>
+<h5><span class="or">Learn more---></span></h5>
+    </div>
+    <div class="boxb">
+        <i class="fa fa-file-archive-o" aria-hidden="true" id="jer"></i>
+        <h1>Eosle commodi</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus temporibus ullam explicabo est labore. Possimus provident praesentium molestiae facere itaque.
+        </p>
+        <h5><span class="ar">Learn more--></span></h5>
+    </div>
+    <div class="boxc">
+        <i class="fa fa-inbox" aria-hidden="true" id="jed"></i>
+        <h1>Ledo markt</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsam odio, repudiandae ex eveniet consequuntur magnam voluptas praesentium accusamus eius.
+</p>
+<h5><span class="or">Learn more---></span></h5>
+    </div>
+</div>
+<div class="main">
+    <div class="boxd">
+        <i class="fa fa-laptop" aria-hidden="true" id="jer"></i>
+        <h1>Asperiores Commodit</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae enim ex, quasi deleniti similique harum sit quas sunt tempora vero.
+</p>
+<h5><span class="ar">Learn more--></span></h5>
+    </div>
+
+    <div class="boxe">
+        <i class="fa fa-id-badge" aria-hidden="true" id="jer"></i>
+        <h1>Velit Doloremquie</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae enim ex, quasi deleniti similique harum sit quas sunt tempora vero.
+</p>
+<h5><span class="ar">Learn more--></span></h5>
+    </div>
+    <div class="boxf">
+        <i class="fa fa-laptop" aria-hidden="true" id="jer"></i>
+        <h1>Dolori Architecto</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae enim ex, quasi deleniti similique harum sit quas sunt tempora vero.
+</p>
+<h5><span class="ar">Learn more--></span></h5>
+    </div>
+</div>
+<br><br><br>
+</div>
+<div class="par">
+    <div class="you">
+    <img src="https://image.cnbcfm.com/api/v1/image/105420523-1535475566932civilengineer.jpg?v=1535475620">
+    </div>
+    <div class="i">
+    <h2>Enim quis est voluptatibus aliquid <br>consequatur fugiat
+    </h2>
+    <br><br>
+    <h4>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi
+    </h4>
+    <br><br>
+    <i class="fa fa-desktop" aria-hidden="true" id="mavi"></i><h3>Lorem ipsum</h3><br>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Totam libero ipsam repellat, possimus sapiente illo quis.
+Adipisci nesciunt qui dolorum.</p>
+<br>
+<i class="fa fa-diamond" aria-hidden="true" id="mavi"></i><h3>Nemo enim</h3><br>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque excepturi consequatur possimus, perferendis rem aliquid exercitationem fugiat illum eveniet.
+
+</p>
+<br>
+<i class="fa fa-star" aria-hidden="true" id="mavi"></i>
+<h3>Dine pad</h3>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi nostrum laborum et ratione fugit ea error veritatis officia mollitia distinctio!
+
+</p><br>
+<i class="fa fa-sun-o" aria-hidden="true" id="mavi"></i>
+<h3>Tride clov</h3>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi nostrum laborum et ratione fugit ea error veritatis officia mollitia distinctio!
+
+</p><br><br><br>
+</div>
+<br><br><br>
+</div>
+<div class="niv">
+    <div class="he">
+        <h3><span class="vi">Modist</span></h3>
+        <h3>Praesenti</h3>
+        <h3>Explica</h3>
+        <h3>Noustrum</h3>
+    </div>
+    <div class="mi">
+        <h1>Voluptatem dignissimos provident</h1><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p><br>
+<i class="fa fa-thumbs-o-up" aria-hidden="true" id="mav"></i><h4>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+<i class="fa fa-thumbs-o-up" aria-hidden="true" id="mav"></i><h4>Duis aute irure dolor in reprehenderit in voluptate velit.</h4><br>
+<i class="fa fa-thumbs-o-up" aria-hidden="true" id="mav"></i><h4>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</h4>
+
+        <img src="//bootstrapmade.com/demo/templates/UpConstruction/assets/img/features-1.jpg">
+    </div>
+    <br><br>
+</div>
+<div class="cag">
+    <div class="aji">
+        <h1>Our Projects</h1><br>
+        <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio
+</p>
+    </div>
+    </div>
+    <div class="iji">
+        <h3><span class="ma">All</span></h3>
+        <h3>Remodeling</h3>
+        <h3>Construction</h3>
+        <h3>Repairs</h3>
+        <h3>Design</h3>
+    </div>
+</div>
+<div class="eg">
+    <div class="a">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/remodeling-1.jpg">
+    </div>
+    <div class="b">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/construction-1.jpg">
+
+    </div>
+    <div class="c">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/repairs-1.jpg">
+
+    </div>
+</div>
+<div class="ag">
+    <div class="d">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/design-1.jpg">
+
+    </div>
+    <div class="e">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/remodeling-2.jpg">
+
+    </div>
+    <div class="f">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/construction-2.jpg">
+
+    </div>
+</div>
+<div class="ig">
+    <div class="g">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/repairs-2.jpg">
+
+    </div>
+    <div class="h">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/design-2.jpg">
+
+    </div>
+    <div class="y">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/remodeling-3.jpg">
+
+        </div>
+</div>
+
+<div class="ug">
+    <div class="q">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/construction-3.jpg">
+
+    </div>
+    <div class="w">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/repairs-3.jpg">
+
+    </div>
+    <div class="r">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/projects/design-3.jpg">
+    </div>
+</div>
+<br><br><br>
+
+<div class="na">
+    <div class="la">
+        <h1>Testimonials</h1>
+        <br>
+        <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti
+
+        </p>
+    </div>
+
+    <div class="ka">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/testimonials/testimonials-2.jpg">
+<h3>Sara Willson</h3><br>
+<p>Designer</p>
+<i class="fa fa-star" aria-hidden="true" id="zuta"></i>
+<i class="fa fa-star" aria-hidden="true" id="zuto">
+</i><i class="fa fa-star" aria-hidden="true" id="zut"></i>
+<i class="fa fa-star" aria-hidden="true" id="zuti"></i>
+<i class="fa fa-star" aria-hidden="true" id="zutt"></i>
+
+
+<br>
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, pariatur iste deleniti quidem recusandae natus necessitatibus dolorum aut tempore unde, quibusdam, dicta incidunt esse quis repudiandae ratione voluptatem magni error.
+
+</p>
+</div>
+<div class="ns">
+    <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/testimonials/testimonials-4.jpg">
+    <h3>Matt Brandon</h3><br>
+    <p>Freelancer</p>
+    <i class="fa fa-star" aria-hidden="true" id="zuta"></i>
+<i class="fa fa-star" aria-hidden="true" id="zuto">
+</i><i class="fa fa-star" aria-hidden="true" id="zut"></i>
+<i class="fa fa-star" aria-hidden="true" id="zuti"></i>
+<i class="fa fa-star" aria-hidden="true" id="zutt"></i>
+<br>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, pariatur iste deleniti quidem recusandae natus necessitatibus dolorum aut tempore unde, quibusdam, dicta incidunt esse quis repudiandae ratione voluptatem magni error.
+</p>
+</div>
+</div>
+<div class="ol">
+    <div class="il">
+        <h1>Recent Blog Posts</h1><br>
+        <h4>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu
+</h4>
+    </div>
+    <div class="pil">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/blog/blog-1.jpg">
+        <button>DECEMBER 12</button>
+        <br>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, in.
+
+        </h3><br>
+        <i class="fa fa-user" aria-hidden="true" id="l"></i><h4>Julia Parker</h4>
+    <p>/</p>
+    <i class="fa fa-folder-o" aria-hidden="true" id="k"></i><h5>Politics</h5>
+<br><br>
+    <p2>Read more ---> <p2>
+    </div>
+
+    <div class="hil">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/blog/blog-2.jpg">
+        <button>JULY 17</button>
+        <br>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, in.
+
+        </h3><br>
+        <i class="fa fa-user" aria-hidden="true" id="a"></i><h4>Mario Douglas</h4>
+    <p>/</p>
+    <i class="fa fa-folder-o" aria-hidden="true" id="j"></i><h5>Sports</h5>
+<br><br>
+    <p2>Read more ---> <p2>
+    </div>
+    <div class="cil">
+        <img src="https://bootstrapmade.com/demo/templates/UpConstruction/assets/img/blog/blog-3.jpg">
+        <button>SEPTEMBER 05</button>
+        <br>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, in.
+
+        </h3><br>
+        <i class="fa fa-user" aria-hidden="true" id="o"></i><h4>Lisa Hunter</h4>
+    <p>/</p>
+    <i class="fa fa-folder-o" aria-hidden="true" id="x"></i><h5>Economics</h5>
+    <br><br>
+    <p2>Read more ---> <p2>
+    </div>
+<br><br><br><br><br>
+</div>
+<div class="zad">
+    <div class="nji">
+        <img src="https://tilt-up.org/tilt-uptoday/wp-content/uploads/2022/06/1-1024-1024x683.jpg">
+    </div>
+    <div class="ji">
+
+    <h1>UPCONSTRUCTION</h1>
+    <br>
+    <p>A108 Adam Street
+        <br>NY 535022, USA</p><br><br>
+        <h3>Phone: +1 5589 55488 55
+        </h3>
+        <h3>Email: info@example.com
+        </h3><br>
+    <p><i class="fa fa-twitter-square" aria-hidden="true"id="z"></i>
+        <i class="fa fa-facebook-square" aria-hidden="true" id="z"></i>
+        <i class="fa fa-instagram" aria-hidden="true" id="z"></i>
+        <i class="fa fa-google" aria-hidden="true" id="z"></i></p>
+<h2>Useful Links </h2>
+<div class="hi">
+<h3>Home</h3>
+<h3>About us</h3>
+<h3>Services</h3>
+<h3>Terms of services</h3>
+<h3>Privati policy</h3>
+    </div>
+    <div class="oi">
+        <h1>Our services</h1><br>
+        <h3>Web design</h3>
+        <h3>Web Development</h3>
+        <h3>Product Menagment</h3>
+        <h3>Marketng</h3>
+        <h3>Graphic design</h3>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</main>
+
+
+</body>
+</html>
